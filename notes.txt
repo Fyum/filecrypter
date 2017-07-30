@@ -1,0 +1,3 @@
+Encrypt and decrypt file using crypto from nodejs
+
+Think about delete, create, security, batch/single processing

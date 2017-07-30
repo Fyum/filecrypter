@@ -1,0 +1,19 @@
+{
+  "name": "filecrypter",
+  "version": "1.0.0",
+  "description": "File crypter project",
+  "main": "app.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fyum/filecrypter.git"
+  },
+  "author": "fyum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fyum/filecrypter/issues"
+  },
+  "homepage": "https://github.com/Fyum/filecrypter#readme"
+}
