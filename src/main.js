@@ -1,29 +1,28 @@
-'use strict';
 require('babel-polyfill');
 
 import crypt from './crypt';
 import decrypt from './decrypt';
 
-const executeCommand = ({
-  command,
-  fileName,
-}) => {
-  const path = `${__dirname}/${fileName}`;
-  switch (command) {
-    case '-c': crypt({ path }); break;
-    case '-d': decrypt({ path }); break;
-    default: handleError();
-  }
-};
-
 const handleError =
-  ({ message }) => {
+  ({ message } = {}) => {
     if (!message) {
       console.log('Error, usage: node ./src/main.js [-c|-d] [filename]');
     } else {
       console.log(`Error, ${message}`);
     }
   };
+
+const executeCommand = ({
+  command,
+  fileName,
+}) => {
+  const path = `${fileName}`;
+  switch (command) {
+    case '-c': crypt({ path }); break;
+    case '-d': decrypt({ path }); break;
+    default: handleError();
+  }
+};
 
 const run = () => {
   if (process.argv.length < 4) {
