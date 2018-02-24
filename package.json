@@ -4,7 +4,10 @@
   "description": "File crypter project",
   "main": "app.js",
   "scripts": {
-    "test": "none"
+    "build": "babel src --out-dir build --source-maps --copy-files",
+    "test": "none",
+    "lint": "eslint src/*.js --fix",
+    "babel-install": "npm install --save-dev babel babel-cli babel-core babel-preset-latest babel-register babel-plugin-transform-object-rest-spread babel-loader babel-plugin-syntax-async-functions babel-plugin-transform-regenerator && npm install --save babel-polyfill"
   },
   "repository": {
     "type": "git",
@@ -35,5 +38,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "jest": "^22.1.4"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^3.8.1"
   }
 }

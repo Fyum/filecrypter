@@ -1,3 +1,4 @@
+'use strict';
 require('babel-polyfill');
 
 import crypt from './crypt';
@@ -11,7 +12,7 @@ const executeCommand = ({
   switch (command) {
     case '-c': crypt({ path }); break;
     case '-d': decrypt({ path }); break;
-    default: throw new Error('');
+    default: handleError();
   }
 };
 
